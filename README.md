@@ -83,9 +83,6 @@ npm run dev
 
 ---
 
-## 📸 Preview
-
-![Linux-Hackers LAB Preview](https://gokali.pro/favicon.png)
 
 > Live at: [https://linuxhackers-lab.vercel.app](https://linuxhackers-lab.vercel.app/)
 

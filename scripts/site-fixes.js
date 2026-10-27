@@ -7,12 +7,12 @@
   function updateExistingInstagramPopup(root) {
     const scope = root || document;
     scope.querySelectorAll("a[href*='instagram.com']").forEach((link) => {
-      if (link.href.includes("gokali_ai")) {
+      if (link.href.includes("linux_hackers")) {
         link.href = INSTAGRAM_URL;
         link.target = "_blank";
         link.rel = "noopener noreferrer";
       }
-      if ((link.textContent || "").includes("@gokali_ai")) {
+      if ((link.textContent || "").includes("@linux_hackers")) {
         link.textContent = INSTAGRAM_HANDLE;
       }
     });
@@ -20,9 +20,9 @@
     scope.querySelectorAll("*").forEach((node) => {
       if (node.childNodes.length === 1 && node.firstChild && node.firstChild.nodeType === Node.TEXT_NODE) {
         node.textContent = node.textContent
-          .replace(/GO KALI/g, "Linux-Hackers")
-          .replace(/@gokali_ai/g, INSTAGRAM_HANDLE)
-          .replace(/gokali_ai/g, "linux_hackers");
+          .replace(/Linux-Hackers/g, "Linux-Hackers")
+          .replace(/@linux_hackers/g, INSTAGRAM_HANDLE)
+          .replace(/linux_hackers/g, "linux_hackers");
       }
     });
 
@@ -63,7 +63,7 @@
   function enhanceExistingInstagramActions(root) {
     const dialogs = Array.from(document.querySelectorAll("[role='dialog']"));
     dialogs.forEach((dialog) => {
-      if (!/instagram|linux_hackers|gokali_ai/i.test(dialog.textContent || "")) return;
+      if (!/instagram|linux_hackers|linux_hackers/i.test(dialog.textContent || "")) return;
       if (dialog.dataset.lhInstagramEnhanced === "true") return;
 
       dialog.dataset.lhInstagramEnhanced = "true";
